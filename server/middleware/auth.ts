@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
   const authHeaderValue = getRequestHeader(event, "authorization");
   if (authHeaderValue) {
     const extractedToken = extractToken(authHeaderValue);
-    const jwtPayload = verify(extractedToken, SECRET);
+    const jwtPayload = verify(extractedToken, SECRET, { complete: false });
     name = (jwtPayload as JwtPayload)["name"] || "";
     event.context.auth = { name };
   }
