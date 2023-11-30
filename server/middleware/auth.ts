@@ -1,4 +1,5 @@
-import { JwtPayload, verify } from "jsonwebtoken";
+// @ts-ignore
+import { verify } from "jsonwebtoken";
 
 const TOKEN_TYPE = "Bearer";
 const SECRET = "dummy";
@@ -14,7 +15,7 @@ export default defineEventHandler(async (event) => {
   if (authHeaderValue) {
     const extractedToken = extractToken(authHeaderValue);
     const jwtPayload = verify(extractedToken, SECRET, { complete: false });
-    name = (jwtPayload as JwtPayload)["name"] || "";
+    name = jwtPayload["name"] || "";
     event.context.auth = { name };
   }
 });

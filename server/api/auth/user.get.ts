@@ -1,4 +1,5 @@
 import { H3Event } from "h3";
+// @ts-ignore
 import { verify } from "jsonwebtoken";
 import { SECRET } from "./login.post";
 
