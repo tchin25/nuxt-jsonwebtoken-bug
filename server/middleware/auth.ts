@@ -1,6 +1,6 @@
 // @ts-ignore
-import { jwt } from "../api/auth/user.get";
+import { verify } from "jsonwebtoken";
 
 export default defineEventHandler((event) => {
-  jwt.verify("test", "secret");
+  verify("test", "secret");
 });
