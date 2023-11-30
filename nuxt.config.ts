@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   modules: [],
   devtools: { enabled: true },
-  build: {
-    transpile: ["jsonwebtoken"],
-  },
+  // build: {
+  //   transpile: ["jsonwebtoken"],
+  // },
 });
