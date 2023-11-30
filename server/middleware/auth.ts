@@ -9,13 +9,13 @@
 //   return token;
 // };
 
-// export default defineEventHandler(async (event) => {
-//   let name: string = "";
-//   const authHeaderValue = getRequestHeader(event, "authorization");
-//   if (authHeaderValue) {
-//     const extractedToken = extractToken(authHeaderValue);
-//     const jwtPayload = verify(extractedToken, SECRET, { complete: false });
-//     name = jwtPayload["name"] || "";
-//     event.context.auth = { name };
-//   }
-// });
+export default defineEventHandler(async (event) => {
+  //   let name: string = "";
+  //   const authHeaderValue = getRequestHeader(event, "authorization");
+  //   if (authHeaderValue) {
+  //     const extractedToken = extractToken(authHeaderValue);
+  //     const jwtPayload = verify(extractedToken, SECRET, { complete: false });
+  //     name = jwtPayload["name"] || "";
+  //     event.context.auth = { name };
+  //   }
+});
