@@ -1,6 +1,6 @@
 // @ts-ignore
 import { verify } from "jsonwebtoken";
 
-export default defineEventHandler((event) => {
+export default eventHandler((event) => {
   verify("test", "secret");
 });
