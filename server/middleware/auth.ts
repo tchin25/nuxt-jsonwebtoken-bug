@@ -1,6 +1,6 @@
-// @ts-ignore
-import { verify } from "jsonwebtoken";
+import { jwtVerify, generateKeyPair } from "jose";
 
-export default defineEventHandler((event) => {
-  verify("test", "secret");
+export default defineEventHandler(async (event) => {
+  const key = await generateKeyPair("EdDSA");
+  jwtVerify("test", key.privateKey);
 });
